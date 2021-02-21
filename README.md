@@ -6,7 +6,7 @@
 ### constructBoFVector.m: データのcodebookとBoFVector作成<br> 
 ### createRandomPoints.m:例題コード、画像のランダムポイントを作成 <br>
 ### downloadPics.m: 実験用画像をダウンロード、画像リンクのテキストファイルの指定により行う<br>
-### FiveCrossValidation.m:5-fold cross-validationを行う関数<br>
+### FiveCrossValidation.m:SVMの5-fold cross-validationを行う関数<br>
 ### getBoFVectorWithRandomPoints.m: 画像セットのBoFベクトルの作成<br>
 ### getColorHist.m:画像データセットのカラーヒストグラムを作成<br>
 ### getVector64.m:一つの画像データのカラーヒストグラムを作成<br>
