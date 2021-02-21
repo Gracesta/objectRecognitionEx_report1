@@ -1,6 +1,6 @@
 # 物体認識論期末課題　レポート課題１ プログラムリスト
 
-### clustering1.m: (1) カラーヒストグラムとSVM <br>
+### clustering1.m: (1) カラーヒストグラムと線形SVM <br>
 ### clustering2.m: (2) BoFベクトルと非線形SVMによる分類 <br>
 ### clustering3.m: (3) AlexNetによるDCNN特徴量と線形SVM <br>
 ### constructBoFVector.m: データのcodebookとBoFVector作成<br> 
