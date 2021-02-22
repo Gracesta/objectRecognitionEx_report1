@@ -13,3 +13,4 @@
 ### init.m:実験の下処理、画像リンクをlistなどのパラメータに読み込む<br>
 ### makeMyCodebook.m:コードブック作成<br>
 ### shuffleData.m:データをシャッフルする<br>
+### evalMyResilt.m.m:認識結果の画像を確認するためのコード<br>
