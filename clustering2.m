@@ -16,7 +16,7 @@ load('BoFVector.mat');              %　BoFベクトル
 load('dataForClustering2.mat');     %　Shufflingした後のBoFベクトルに張り付けたラベルなど
 
 % 5-fold cross validationで評価し、その五つの精度を得る
-prob = FiveCrossValidation(myBoF, labels, 'rbf');
+[prob, miss, hits] = FiveCrossValidation(myBoF, labels, 'rbf');
 
 %　平均を取る
 avergeProb = mean(prob);

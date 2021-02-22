@@ -24,7 +24,7 @@ labels = [ones(m/2,1); zeros(m/2,1)];
 [hist, labels] = shuffleData(hist, labels);
 
 % 5-fold cross validationで評価し、その五つの精度を得る
-prob = FiveCrossValidation(hist, labels, 'linear');
+[prob, miss, hits] = FiveCrossValidation(hist, labels, 'linear');
 
 %　平均を取る
 avergeProb = mean(prob);
