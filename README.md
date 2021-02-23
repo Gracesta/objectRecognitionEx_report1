@@ -14,3 +14,7 @@
 ### makeMyCodebook.m:コードブック作成<br>
 ### shuffleData.m:データをシャッフルする<br>
 ### evalMyResilt.m.m:認識結果の画像を確認するためのコード<br>
+
+### urllist1.txt: 寿司画像<br>
+### urllist2.txt:　虎画像<br>
+### urllist3.txt:　ライオン画像<br>
