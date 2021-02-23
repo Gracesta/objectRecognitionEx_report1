@@ -4,7 +4,7 @@
 %
 %------------------------------------------------------------------%
 
-LIST={'sushi' 'tiger'};
+LIST={'lion' 'tiger'}; % or sushi and lion
 
 n = 0;
 list = {};
@@ -22,5 +22,5 @@ for i=1:length(LIST)
     end
 end
 
-save('FileDir.mat', 'list');
+save('FileDir2.mat', 'list');
 

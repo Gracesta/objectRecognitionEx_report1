@@ -12,7 +12,7 @@ function histMat = getColorHist(trainingSet)
 % Need getVector64.m file
     histMat = [];
     for i=1:length(trainingSet)
-            histMat = [histMat; getVector64(trainingSet{i})];
+        histMat = [histMat; getVector64(trainingSet{i})];
     end
 end
 

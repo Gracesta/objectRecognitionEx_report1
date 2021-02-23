@@ -7,13 +7,15 @@
 %
 %------------------------------------------------------------------%
 
+
 % 画像リンクを読み込む
-load('FileDir.mat');
+% FileDir: sushi and tiger, FileDir2: lion and tiger
+load('FileDir2.mat');      
 
 % constructBoFVector.mの方で処理したデータを読み込む
-load('codebook.mat');               %　コードブック
-load('BoFVector.mat');              %　BoFベクトル
-load('dataForClustering2.mat');     %　Shufflingした後のBoFベクトルに張り付けたラベルなど
+load('codebook_lion_tiger.mat');               %　コードブック
+load('BoFVector_lion_tiger.mat');              %　BoFベクトル
+load('dataForClustering2_lion_tiger.mat');     %　Shufflingした後のBoFベクトルに張り付けたラベルなど
 
 % 5-fold cross validationで評価し、その五つの精度を得る
 [prob, miss, hits] = FiveCrossValidation(myBoF, labels, 'rbf');
@@ -24,7 +26,7 @@ avergeProb = mean(prob);
 %------------------------------------------------------------
 %
 %       実行結果：
-%
+%       虎と寿司：
 %         prob =
 %
 %             0.9500    0.9375    0.9500    0.9500    0.9250
@@ -32,4 +34,12 @@ avergeProb = mean(prob);
 %         avergeProb =
 % 
 %             0.9425
+%        虎とライオン
+%          prob =
+% 
+%             0.8500    0.7625    0.8250    0.8250    0.9000
+% 
+%             avergeProb =
+% 
+%             0.8325
 %-----------------------------------------------------------------

@@ -8,7 +8,9 @@
 %------------------------------------------------------------------%
 
 % 画像リンクをInit関数にて先に処理し、listで受け取る
-% 1~200は寿司、201~400は虎
+% 1~200は寿司/ライオン、201~400は虎
+load('FileDir2.mat'); 
+
 m = 400;
 imgList = list';
 sizeOfCodeBook = 1000;
@@ -25,14 +27,14 @@ labels = [ones(m/2,1); zeros(m/2,1)];
 %  先にコードブックを作る、一応各画像に対して300個のポイント
 %　をサンプリングする
 codebook = makeMyCodeBook(imgList, sizeOfCodeBook, pointsNumberForEachImg);
-save('codebook.mat', 'codebook');
+save('codebook_lion_tiger.mat', 'codebook');
 
 % コードブックはと一致な数の点をランダムにサンプリングし、
 % Bag of Featuresを求める
 myBoF = getBoFVectorWithRandomPoints(codebook, imgList, pointsNumberForEachImg);
-save('BoFVector.mat', 'myBoF');
+save('BoFVector_lion_tiger.mat', 'myBoF');
 
 
 %　評価の精度の考慮で、データをShufflingしたので、
 %　BoFベクトルのラベルなどの画像データも保存
-save('dataForClustering2.mat', 'labels', 'imgList');
+save('dataForClustering2_lion_tiger.mat', 'labels', 'imgList');

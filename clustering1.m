@@ -7,10 +7,11 @@
 %------------------------------------------------------------------%
 
 % 画像リンクをInit関数にて先に処理し、listで受け取る
-% 1~200は寿司、201~400は虎
+% 1~200は寿司/ライオン、201~400は虎
 
 % 画像リンクを読み込む
-load('FileDir.mat');
+% FileDir: sushi and tiger, FileDir2: lion and tiger
+load('FileDir2.mat');            
 
 m = 400;
 imgList = list;
@@ -24,7 +25,7 @@ labels = [ones(m/2,1); zeros(m/2,1)];
 [hist, labels] = shuffleData(hist, labels);
 
 % 5-fold cross validationで評価し、その五つの精度を得る
-[prob, miss, hits] = FiveCrossValidation(hist, labels, 'linear');
+[prob, miss, hits] = FiveCrossValidation(hist, labels, 'linear'); 
 
 %　平均を取る
 avergeProb = mean(prob);
@@ -32,7 +33,7 @@ avergeProb = mean(prob);
 %------------------------------------------------------------
 %
 %       実行結果：
-%
+%        tiger AND sushi:
 %         prob =
 %
 %             0.9250    0.8500    0.9500    0.8875    0.9500
@@ -40,4 +41,12 @@ avergeProb = mean(prob);
 %         avergeProb =
 % 
 %             0.9125
+%
+%         lion AND tiger
+%         prob =
+% 
+%             0.7125    0.7375    0.7375    0.7500    0.7375
+%         avergeProb =
+% 
+%             0.7350
 %-----------------------------------------------------------------

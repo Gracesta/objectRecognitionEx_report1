@@ -6,9 +6,10 @@
 %
 %------------------------------------------------------------------%
 
-list = textread('urllist2.txt','%s'); % list = textread('urllist1.txt','%s');
+% urllist1:sushi urllist2:tiger urllist3:lion
+list = textread('urllist3.txt','%s'); % list = textread('urllist1.txt','%s');
 
-OUTDIR='tiger';                     % OUTDIR='sushi';        
+OUTDIR='lion';                     % OUTDIR='sushi';        
 mkdir(OUTDIR);
 for i=1:size(list,1)
   fname=strcat(OUTDIR,'/',num2str(i,'%04d'),'.jpg')
